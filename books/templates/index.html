@@ -1,3 +1,10 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    Readings
+{% endblock %}
+
+{% block content %}
 <h1>Things I've read</h1>
 <p>A site where I keep track of all the things I've read over the last few years!</p>
 {% regroup books_list by read_date|date:'Y' as year_list %}
@@ -11,3 +18,4 @@
     {% endfor %}
     </ul>
 {% endfor %}
+{% endblock %}
