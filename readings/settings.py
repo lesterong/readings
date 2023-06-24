@@ -25,12 +25,13 @@ SECRET_KEY = "django-insecure-hi+*1xvdifl*vh(#oyw4o=he$nc9ib4_b97o&o_ru)qhqw%e#2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "books.apps.BooksConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

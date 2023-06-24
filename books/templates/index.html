@@ -1,0 +1,13 @@
+<h1>Things I've read</h1>
+<p>A site where I keep track of all the things I've read over the last few years!</p>
+{% regroup books_list by read_date|date:'Y' as year_list %}
+{% for year in year_list %}
+    <h2>{{ year.grouper }}</h2>
+    <ul>
+    {% for book in year.list %}
+        <li>
+            {{ book.title }} by <em>{{ book.author }}</em>
+        </li>
+    {% endfor %}
+    </ul>
+{% endfor %}
